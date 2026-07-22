@@ -1,12 +1,53 @@
 * {
   box-sizing: border-box;
+  font-family: robotoSlab;
+}
+
+@font-face {
+  font-family: robotoSlab;
+  src: url(RobotoSlab-Regular.ttf);
+}
+
+a {
+  text-decoration: none;
+  
+}
+
+a:link {
+  color: rgb(79, 33, 122);
+}
+
+a:visited {
+  color: rgb(79, 33, 122);
+}
+
+a:hover {
+  color: rgb(140, 118, 158);
+}
+
+a:active {
+  color: rgb(170, 80, 255);
+}
+
+h1 {
+ margin-top: 5px;
+}
+
+ul {
+  line-height: 27px;
 }
 
 html,
 body {
   margin: 0px;
   padding: 0px;
-  background-color: blue;
+  background-image: url("4799.jpg");
+  background-color: rgb(61, 85, 84);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  height: 500px;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -15,37 +56,43 @@ body {
 .main {
   margin: 10vh 15vw;
   display: grid;
-  gap: 50px;
+  gap: 30px;
   grid-template-areas:
   "picture content"
   "menu content";
   grid-template-columns: 300px 1fr;
   grid-template-rows: 300px 30vh;
-  background-color: aliceblue;
+  background-color:  rgba(1, 82, 78, 0);
 }
 
 .picture {
   grid-area: picture;
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .menu {
   grid-area: menu;
+  /* background-color: green; */
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(7px);
 }
 
 .menu-content {
-  background-color: green;
-  padding: 25px;
+  padding: 0px 10px 10px 20px;
+  font-size:x-large;
 }
 
 .content {
   grid-area: content;
   overflow: scroll;
-  background-color: orange;
+  /* background-color: orange; */
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(7px);
   padding: 15px;
+  padding-left: 25px;
 }
 
 .footer {
   margin-left: 15vw;
-  margin-top: 19vh;
+  margin-bottom: 25px;
 }

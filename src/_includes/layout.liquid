@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang='en'>
+<style>
+    html,
+    body {
+        margin: 0px;
+        padding: 0px;
+        background-color: rgb(1, 82, 78);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+    }
+</style>
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>{{ title }}</title>
-    <link rel='stylesheet' href='/style.css'>
+    <title>Sièna van Schaick</title>
+    <link rel='stylesheet' href='/static/style.css'>
 </head>
 <body>
     <div class="main">
         {% include 'menu' %}
         <div class="picture">
-            <img src="static/linkedin_pf_vierkant.jpg" alt="picture" width="300" height="300">
+            <img src="/static/linkedin_pf_vierkant.jpg" alt="picture" width="300" height="300">
         </div>
         <div class="content">
             <h1>{{ title }}</h1>
