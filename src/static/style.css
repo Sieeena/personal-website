@@ -10,7 +10,6 @@
 
 a {
   text-decoration: none;
-  
 }
 
 a:link {
@@ -37,8 +36,11 @@ ul {
   line-height: 27px;
 }
 
-html,
-body {
+.background{
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
   margin: 0px;
   padding: 0px;
   background-image: url("4799.jpg");
@@ -47,14 +49,21 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
-  height: 500px;
   width: 100vw;
   height: 100vh;
-  position: fixed;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
 
 .main {
-  margin: 10vh 15vw;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin: 16vh 15vw;
   display: grid;
   gap: 30px;
   grid-template-areas:
@@ -65,6 +74,21 @@ body {
   background-color:  rgba(1, 82, 78, 0);
 }
 
+@media screen and (max-width: 600px) {
+  .picture {
+    display: none;
+  }
+  .main {
+    grid-template-areas:
+    "menu menu"
+    "content content";
+    margin: 3vh 7vw;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 200px 30vh;
+  }
+}
+/* meuk gaat nog steeds mis op een klein liggend scherm.. (en ziet er uberhaupt nog niet goed uit op mobiel)*/
+
 .picture {
   grid-area: picture;
   background-color: rgba(0, 0, 0, 0);
@@ -72,9 +96,8 @@ body {
 
 .menu {
   grid-area: menu;
-  /* background-color: green; */
-  background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(7px);
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
 }
 
 .menu-content {
@@ -85,9 +108,8 @@ body {
 .content {
   grid-area: content;
   overflow: scroll;
-  /* background-color: orange; */
-  background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(7px);
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
   padding: 15px;
   padding-left: 25px;
 }
