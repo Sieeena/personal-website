@@ -80,24 +80,44 @@ ul {
   }
   .main {
     grid-template-areas:
-    "menu menu"
-    "content content";
-    margin: 3vh 7vw;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: 200px 30vh;
+    "menu"
+    "content";
+    margin: 6vh 10vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr;
+    height: 88vh;
+    justify-content: center;
   }
 }
-/* meuk gaat nog steeds mis op een klein liggend scherm.. (en ziet er uberhaupt nog niet goed uit op mobiel)*/
+
+@media screen and (max-height: 600px){
+  .picture {
+    display: none;
+  }
+  .main {
+    grid-template-areas:
+    "menu content";
+    margin: 6vh 10vw;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr;
+    height: 88vh;
+    justify-content: center;
+  }
+}
 
 .picture {
   grid-area: picture;
   background-color: rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  overflow: hidden;
 }
 
 .menu {
   grid-area: menu;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(15px);
+  border-radius: 2px;
+  min-height: 0;
 }
 
 .menu-content {
@@ -112,6 +132,8 @@ ul {
   backdrop-filter: blur(15px);
   padding: 15px;
   padding-left: 25px;
+  border-radius: 2px;
+  min-height: 0;
 }
 
 .footer {
