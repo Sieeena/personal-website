@@ -15,7 +15,7 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Sièna van Schaick</title>
-    <link rel='stylesheet' href='/static/style.css'>
+    <link rel='stylesheet' href="{{ '/static/style.css' | url }}">
 </head>
 <body>
     <div class="background">
@@ -23,7 +23,7 @@
     <div class="main">
         {% include 'menu' %}
         <div class="picture">
-            <img src="/static/linkedin_pf_vierkant.jpg" alt="picture" width="300" height="300">
+            <img src="{{'/static/linkedin_pf_vierkant.jpg' | url }}" alt="picture" width="300" height="300">
         </div>
         <div class="content">
             <h1>{{ title }}</h1>
