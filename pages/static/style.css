@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  font-family: robotoSlab;
+}
+
+@font-face {
+  font-family: robotoSlab;
+  src: url(RobotoSlab-Regular.ttf);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: rgb(79, 33, 122);
+}
+
+a:visited {
+  color: rgb(79, 33, 122);
+}
+
+a:hover {
+  color: rgb(140, 118, 158);
+}
+
+a:active {
+  color: rgb(170, 80, 255);
+}
+
+h1 {
+ margin-top: 5px;
+}
+
+ul {
+  line-height: 27px;
+}
+
+.background{
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("4799.jpg");
+  background-color: rgb(61, 85, 84);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  width: 100vw;
+  height: 100vh;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.main {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin: 16vh 15vw;
+  display: grid;
+  gap: 30px;
+  grid-template-areas:
+  "picture content"
+  "menu content";
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 300px 30vh;
+  background-color:  rgba(1, 82, 78, 0);
+}
+
+@media screen and (max-width: 600px) {
+  .picture {
+    display: none;
+  }
+  .main {
+    grid-template-areas:
+    "menu"
+    "content";
+    margin: 6vh 10vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr;
+    height: 88vh;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-height: 600px){
+  .picture {
+    display: none;
+  }
+  .main {
+    grid-template-areas:
+    "menu content";
+    margin: 6vh 10vw;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr;
+    height: 88vh;
+    justify-content: center;
+  }
+}
+
+.picture {
+  grid-area: picture;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.menu {
+  grid-area: menu;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  border-radius: 2px;
+  min-height: 0;
+}
+
+.menu-content {
+  padding: 0px 10px 10px 20px;
+  font-size:x-large;
+}
+
+.content {
+  grid-area: content;
+  overflow: scroll;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  padding: 15px;
+  padding-left: 25px;
+  border-radius: 2px;
+  min-height: 0;
+}
+
+.footer {
+  margin-left: 15vw;
+  margin-bottom: 25px;
+}
